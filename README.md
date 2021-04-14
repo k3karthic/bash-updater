@@ -1,5 +1,7 @@
 # YDNS Bash Updater Script
 
+Forked Changes: The instance is assumed to be running on Oracle Cloud. The `YDNS_HOST` variable is populated by querying the [Instance Metadata](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/gettingmetadata.htm) for a tag called `ydns_host`.
+
 This repository contains the bash updater script which can be used on *NIX-like environments to update dynamic hosts. It is recommended to use this script with cronjob to run periodically (preferrably every 15 minutes).
 
 The script uses the YDNS API v1 (dyn-compatible).

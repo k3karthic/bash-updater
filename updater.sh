@@ -25,7 +25,7 @@
 
 YDNS_USER="user@host.xx"
 YDNS_PASSWD="secret"
-YDNS_HOST="myhost.ydns.eu"
+YDNS_HOST=$( curl -H 'Authorization: Bearer Oracle' http://169.254.169.254/opc/v2/instance/ | jq -r .freeformTags.ydns_host )
 YDNS_LASTIP_FILE="/tmp/ydns_last_ip_$YDNS_HOST"
 
 ##
